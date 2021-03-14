@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TabPane prefHeight="433.0" prefWidth="448.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab closable="false" text="Промежуточная аттестация">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ChoiceBox fx:id="chooseGroup" layoutX="50.0" layoutY="14.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="chooseStudent" layoutX="248.0" layoutY="14.0" prefWidth="150.0" />
+                        <TextFlow fx:id="attestationBook" layoutX="50.0" layoutY="114.0" prefHeight="177.0" prefWidth="348.0" style="-fx-background-color: white;" />
+                        <Text layoutX="35.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Зачетная книжка выбранного студента" textAlignment="CENTER" wrappingWidth="377.7294921875" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab closable="false" text="Информация об аттестации">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buttonConfirm" layoutX="340.0" layoutY="350.0" mnemonicParsing="false" text="Сохранить" textAlignment="CENTER" />
+                        <ChoiceBox fx:id="chooseGroup1" layoutX="50.0" layoutY="14.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="chooseSubject" layoutX="247.0" layoutY="14.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="chooseStudent1" layoutX="50.0" layoutY="48.0" prefWidth="150.0" />
+                        <TextFlow fx:id="attestationInfo" layoutX="50.0" layoutY="85.0" prefHeight="193.0" prefWidth="348.0" style="-fx-background-color: white;" />
+                        <ChoiceBox fx:id="chooseMark" layoutX="247.0" layoutY="48.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Справочник">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="402.0" prefWidth="448.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Студенты">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="buttonStudentsDelete" layoutX="359.0" layoutY="323.0" mnemonicParsing="false" text="Удалить" textAlignment="CENTER" />
+                                          <TableView fx:id="tableStudents" layoutX="15.0" layoutY="14.0" prefHeight="297.0" prefWidth="418.0">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="textProfessors" text="Преподаватели">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="buttonProfessorsDelete" layoutX="359.0" layoutY="323.0" mnemonicParsing="false" text="Удалить" textAlignment="CENTER" />
+                                          <TableView fx:id="tableProfessors" layoutX="15.0" layoutY="14.0" prefHeight="297.0" prefWidth="418.0">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab fx:id="textPlan" text="План">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="35.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Учебные планы всех направлений" textAlignment="CENTER" wrappingWidth="377.7294921875" />
+                                          <TextFlow fx:id="edPlan" layoutX="44.0" layoutY="43.0" prefHeight="287.0" prefWidth="366.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Добавление">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="402.0" prefWidth="448.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab text="Добавить нового студента">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="studSave" layoutX="299.0" layoutY="325.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Сохранить" />
+                                          <Text layoutX="147.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление нового студента" />
+                                          <Text layoutX="139.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" wrappingWidth="28.44921875" />
+                                          <Text layoutX="113.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия" />
+                                          <Text layoutX="112.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество" />
+                                          <Text layoutX="13.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата рождения (дд/мм/гггг)" />
+                                          <Text layoutX="115.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Эл.почта" />
+                                          <Text layoutX="112.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Факльтет" />
+                                          <Text layoutX="76.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Специальность" />
+                                          <Text layoutX="120.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Группа" />
+                                          <TextField fx:id="studName" layoutX="167.0" layoutY="41.0" />
+                                          <TextField fx:id="studSurname" layoutX="167.0" layoutY="70.0" />
+                                          <TextField fx:id="studPatronymic" layoutX="167.0" layoutY="101.0" />
+                                          <TextField fx:id="studBirthday" layoutX="167.0" layoutY="130.0" />
+                                          <TextField fx:id="studEmail" layoutX="167.0" layoutY="162.0" />
+                                          <TextField fx:id="studFackulty" layoutX="167.0" layoutY="192.0" />
+                                          <TextField fx:id="studSpecialty" layoutX="167.0" layoutY="223.0" />
+                                          <TextField fx:id="studSubject" layoutX="167.0" layoutY="254.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="textProfessors1" text="Добавить нового преподавателя">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="proffSave" layoutX="262.0" layoutY="334.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Сохранить" />
+                                          <Text layoutX="117.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление нового преподавателя" wrappingWidth="213.142578125" />
+                                          <Text layoutX="134.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" wrappingWidth="28.44921875" />
+                                          <Text layoutX="109.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия" />
+                                          <Text layoutX="109.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество" />
+                                          <Text layoutX="7.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата рождения (дд/мм/гггг)" />
+                                          <Text layoutX="110.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Эл.почта" />
+                                          <Text layoutX="109.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Факльтет" />
+                                          <Text layoutX="96.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Должность" />
+                                          <Text layoutX="110.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Предмет" />
+                                          <TextField fx:id="proffName" layoutX="163.0" layoutY="43.0" />
+                                          <TextField fx:id="proffSurname" layoutX="163.0" layoutY="72.0" />
+                                          <TextField fx:id="proffPatronymic" layoutX="163.0" layoutY="103.0" />
+                                          <TextField fx:id="proffBirthday" layoutX="163.0" layoutY="134.0" />
+                                          <TextField fx:id="proffEmail" layoutX="163.0" layoutY="165.0" />
+                                          <TextField fx:id="proffFackulty" layoutX="163.0" layoutY="196.0" />
+                                          <TextField fx:id="proffSpecialty" layoutX="163.0" layoutY="229.0" />
+                                          <TextField fx:id="proffSubject" layoutX="163.0" layoutY="262.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="textPlan1" text="Добавить новый предмет">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TextField fx:id="attName" layoutX="224.0" layoutY="132.0" />
+                                          <Text layoutX="35.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавить новый предмет" textAlignment="CENTER" wrappingWidth="377.7294921875" />
+                                          <ChoiceBox fx:id="attestationType" layoutX="46.0" layoutY="45.0" prefWidth="150.0" />
+                                          <ChoiceBox fx:id="proff" layoutX="246.0" layoutY="45.0" prefWidth="150.0" />
+                                          <Text layoutX="167.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название" />
+                                          <Text layoutX="125.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата проведения" />
+                                          <TextField fx:id="attDate" layoutX="224.0" layoutY="162.0" />
+                                          <Button fx:id="attSave" layoutX="261.0" layoutY="334.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Сохранить" />
+                                          <ChoiceBox fx:id="subj" layoutX="149.0" layoutY="88.0" prefWidth="150.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</GridPane>

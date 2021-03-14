@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="343.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="studSave" layoutX="354.0" layoutY="290.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Сохранить" />
+      <Text layoutX="175.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление нового студента" />
+      <Text layoutX="180.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Имя" wrappingWidth="28.44921875" />
+      <Text layoutX="154.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия" />
+      <Text layoutX="155.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отчество" />
+      <Text layoutX="53.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата рождения (дд/мм/гггг)" />
+      <Text layoutX="156.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Эл.почта" />
+      <Text layoutX="154.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Факльтет" />
+      <Text layoutX="122.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Специальность" />
+      <Text layoutX="164.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Группа" />
+      <TextField fx:id="studName" layoutX="209.0" layoutY="55.0" />
+      <TextField fx:id="studSurname" layoutX="209.0" layoutY="82.0" />
+      <TextField fx:id="studPatronymic" layoutX="209.0" layoutY="111.0" />
+      <TextField fx:id="studBirthday" layoutX="209.0" layoutY="140.0" />
+      <TextField fx:id="studEmail" layoutX="209.0" layoutY="166.0" />
+      <TextField fx:id="studFackulty" layoutX="209.0" layoutY="194.0" />
+      <TextField fx:id="studSpecialty" layoutX="209.0" layoutY="224.0" />
+      <TextField fx:id="studSubject" layoutX="209.0" layoutY="253.0" />
+   </children>
+</Pane>
